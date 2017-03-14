@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Production</title>
+    <title>Staff</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/index.css"/>
+    <!--<link rel="stylesheet" href="css/index.css"/>-->
+    <link rel="stylesheet" href="css/staff.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -40,7 +41,7 @@
                     <div class="uib-collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-left" style="padding-left: 38%">
                             <li class="containerWord topBotomBordersOut" >
-                                <h3>PRODUCTION </h3>
+                                <h3>STAFF </h3>
                             </li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right" >
@@ -84,72 +85,81 @@
                   </div>-->
             </div>
             <!-- middle pane -->
-            <div class="col-lg-10 col-sm-10 col-md-10" style= "background-color:gold;height: 100%;text-align: center;background-color: #e4e4e4">
-               <!-- title inside invoice pane-->
-
-                <!--new idea-->
-                <form action="/action_page.php" method="post">
-                <div class= "row" style="padding: 58px;">
-
-                        <table class="table" style="display: grid;width:70%">
-
-                        <thead  class="table">
-                        <tr style="border-radius: 5px;">
-                            <th style="width: 140px;text-align: center;border: 1px solid rgba(0, 153, 255,1);">
-                                <div class="btn-group" role="group"  >
-                                    <b>Job</b>
-                                </div>
-                            </th>
-                            <th style="background-color: rgba(0, 153, 255, 1);width: 224px;text-align: center;">
-                                <div class="btn-group" role="group" >
-                                    <b style="color: #fbfaff">  E357892</b>
-                                </div>
-                            </th>
-                        </tr>
-                        </thead>
-
-                        <tbody style="text-align: left">
-                        <tr>
-
-                            <td>Client</td>
-                            <td>
-                                <select name="cars" style="width: 100%">
-                                    <option value="volvo">Volvo</option>
-                                    <option value="saab">Saab</option>
-                                    <option value="fiat">Fiat</option>
-                                    <option value="audi">Audi</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Contact Person</td>
-                            <td>
-                                <select name="cars" style="width: 100%">
-                                    <option value="volvo">Volvo</option>
-                                    <option value="saab">Saab</option>
-                                    <option value="fiat">Fiat</option>
-                                    <option value="audi">Audi</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>
-
-                                    <div style="text-align: right;">
-                                        <input class="btn btn-primary" type="submit" value="Process" style="font-weight: bold;">
-                                        <button class="btn" type="reset"><b>Cancel</b></button>
-                                    </div>
-
-                            </td>
-                        </tr>
-
-                        </tbody>
-                    </table>
-
+            <div class="col-lg-10 col-sm-10 col-md-10" style= "height: 100%;text-align: center;background-color: #e4e4e4;padding: 30px">
+                <!-- Main pane panel-->
+                <div class="row" style="height: 5%;">
+                    <div class="col-sm-2 col-lg-2 col-md-2" style="font-size: xx-large;"  >
+                        Status
+                    </div>
+                    <div class="col-sm-2 col-lg-2 col-md-2" style="color: #0099FF;font-size: large;">
+                        Overall
+                    </div>
+                    <div class="col-sm-2 col-lg-2 col-md-2" style="color: #0099FF;font-size: large;">
+                        Administration
+                    </div>
+                    <div class="col-sm-2 col-lg-2 col-md-2" style="color: #0099FF;font-size: large;">
+                        Production
+                    </div>
+                    <div class="col-sm-2 col-lg-2 col-md-2" style="color: #0099FF;font-size: large;">
+                        Printing
+                    </div>
 
                 </div>
-                </form>
+                <div class="row"  style="height: 60%;background-color: #ffffff">
+                    <div class="col-sm-2 col-lg-2 col-md-2" style="height: 100%;"  >
+
+                        <div style="text-align: left;font-size: large;margin: 10px">
+                            <div><p>All</p></div>
+                            <div><p style="text-decoration: underline">Present</p></div>
+                            <div><p style="text-decoration: underline">Leave</p></div>
+                            <div><p style="text-decoration: underline">Suspended</p></div>
+                            <div><p style="text-decoration: underline">Past</p></div>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-10 col-lg-10 col-md-10" style="height: 100%;background-color: #ffffff;">
+                        <div style="margin: 10px;border-color: #cccccc;border-style: solid;border-width: 1px;height: 95%;" >
+
+                            <p id="leavemessage" style="text-align: left;margin-left: 5px">7 are on leave</p>
+
+                            <table class="table table-default" style="text-align: left">
+                                <thead>
+
+                                <tr>
+                                    <th>#</th>
+                                    <th>NAME</th>
+                                    <th>STATUS</th>
+                                    <th>LEAVES LEFT</th>
+                                    <th> </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th scope="row"> <input type="checkbox" class="form-check-input"></th>
+                                    <td>Delivery 2016</td>
+                                    <td>ALL DEliverie, On Time and Late</td>
+                                    <td>23/4/2017</td>
+                                    <td><div class="circle" >
+                                        <a href="#" class="btn btn-default btn-circle">More</a>
+                                    </div></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"> <input type="checkbox" class="form-check-input"></th>
+                                    <td>Delivery 2014</td>
+                                    <td>Gondl, On Time and too late</td>
+                                    <td>23/4/2015</td>
+                                    <td><div class="circle" >
+                                        <a href="#" class="btn btn-default btn-circle">More</a>
+                                    </div></td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
         </div>
 
