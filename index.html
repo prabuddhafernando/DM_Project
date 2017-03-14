@@ -5,9 +5,13 @@
     <title>Dash-Board</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/index.css"/>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.canvasjs.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+
 
 </head>
 
@@ -61,9 +65,9 @@
 
     </div>
 
-    <div class="row" style="background-color: #10d798;height: 1000px;padding-top: 37px">
+    <div class="row" style="background-color: #e4e4e4;height: 1000px;padding-top: 37px">
         <!--item menu-->
-        <div class="col-lg-1 col-sm-2 col-md-2"  style="background-color:#14e3cf;height: 100%;width:auto">
+        <div class="col-lg-1 col-sm-2 col-md-2"  style="background-color:#f2f2f2;height: 100%;width:auto">
            <!-- <ul class="list-group" >
                 <li class="list-group-item"><img src="images/dashboard/u17.png" style="padding:10px;cursor: pointer;"/></li>
                 <li class="list-group-item "><img src="images/dashboard/u11.png" style="padding:10px;cursor: pointer;"/></li>
@@ -84,24 +88,131 @@
             </div>-->
         </div>
         <!-- middle pane -->
-        <div class="col-lg-8 col-sm-10 col-md-7" style="background-color:gold;height: 100%;text-align: center">
-            <h4 >STATUS</h4>
-            <div class="row" style="background-color: #d9534f;height: 40%;">
-                <div class="col-sm-4" style="background-color: #8a6d3b;height: 100%;" >
-                    Processing
+        <div class="col-lg-8 col-sm-10 col-md-7" style="background-color:#e4e4e4;height: 100%;text-align: center;padding-left: 25px;padding-right: 28px;">
+
+            <div class="row" style="background-color: #f2f2f2;">
+                <div class="col-sm-11" >
+                    <h3 >STATUS</h3>
                 </div>
-                <div class="col-sm-4" style="background-color: #ea6600;height: 100%;">
-                    Pending
-                </div>
-                <div class="col-sm-4" style="background-color: #1cf181;height: 100%;">
-                    Completed
+                <div class="col-sm-1" >
+                    <img src="images/dashboard/u21.png" style="padding:10px;cursor: pointer;"/>
                 </div>
             </div>
-            <div class="row" style="background-color: #4480d9;height: 50%;">
-                <div class="col-sm-4" style="background-color: #f1b0eb;height: 100%;">
-                    ON LEAVE</div>
-                <div class="col-sm-8" style="background-color: #2134f1;height: 100%;">
-                    PRODUCTION TREND
+
+            <div class="row" style="height: 37%;background-color: #f2f2f2;">
+
+                <div class="col-sm-4" style="height: 100%;" >
+
+                    <div class="row" id="n1" style="height: 80%">
+                        <!--Pie Chart -->
+                        <div class="progress-pie-chart"  data-percent="89">
+                            <div class="ppc-progress">
+                                <div class="ppc-progress-fill"></div>
+                            </div>
+                            <div class="ppc-percents">
+                                <div class="pcc-percents-wrapper">
+                                    <span>%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Chart -->
+                    </div>
+                    <div class="row" >
+                            <p style="font-size: 25px">Processing</p>
+                    </div>
+
+                </div>
+                <div class="col-sm-4" style="height: 100%;">
+                    <div class="row" id="n2" style="height: 80%">
+                        <!--Pie Chart -->
+                        <div class="progress-pie-chart " data-percent="69">
+                            <div class="ppc-progress">
+                                <div class="ppc-progress-fill"></div>
+                            </div>
+                            <div class="ppc-percents">
+                                <div class="pcc-percents-wrapper">
+                                    <span>%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Chart -->
+                    </div>
+                    <div class="row" >
+                        <p style="font-size: 25px">Pending</p>
+                    </div>
+
+                </div>
+                <div class="col-sm-4" style="height: 100%;">
+                    <div class="row" id="n3" style="height: 80%">
+                        <!--Pie Chart -->
+                        <div class="progress-pie-chart" data-percent="58">
+                            <div class="ppc-progress">
+                                <div class="ppc-progress-fill"></div>
+                            </div>
+                            <div class="ppc-percents">
+                                <div class="pcc-percents-wrapper">
+                                    <span>%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Chart -->
+                    </div>
+                    <div class="row" >
+                        <p style="font-size: 25px">Completed</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" style="background-color: #e4e4e4;;height: 40%;padding-top: 10px;">
+                <div class="col-xs-4" style="background-color: #f2f2f2;;height: 100%;width: 36%;    margin-right: 2%;">
+                    <div class="row">
+                        <div  style="    width: 75%;display:  inline-block" >
+                            <h5 >ON LEAVE</h5>
+                        </div>
+                        <div  style="  display: inline-block" >
+                            <img src="images/dashboard/u21.png" style="padding:10px;cursor: pointer;"/>
+                        </div>
+
+                    </div>
+                <div class="row" style="height: 40%;padding-left:15px;text-align: left">
+                    <div class="row" style="display:  inline-flex;">
+                        <table class="table table-inverse" style="position: absolute;padding: 10px">
+
+                            <tbody>
+                            <tr>
+                                <td>Mark</td><td style="text-align: right;color: #4db53c">Otto</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td><td style="text-align: right;color: #4db53c">Otto</td>
+                            </tr>
+                            <tr>
+                                <td>Jacob</td><td style="text-align: right;color: #4db53c">Thornton</td>
+
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                </div>
+
+
+                </div>
+                <!--<div  class="col-xs-1" style="width:37px;"></div>-->
+                <div class="col-xs-8" style="background-color: #f2f2f2;height: 100%;width: 62%">
+
+                    <div class="row" style="height: 14%">
+                        <div  style="    width: 86%;display:  inline-block" >
+                            <h5 >PRODUCTION TREND</h5>
+                        </div>
+                        <div  style="  display: inline-block" >
+                            <img src="images/dashboard/u21.png" style="padding:10px;cursor: pointer;"/>
+                        </div>
+
+                    </div>
+                    <div class="row" style="padding-left:15px;padding-right:15px;text-align: left" >
+                        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                    </div>
                 </div>
 
             </div>
@@ -156,7 +267,7 @@
 
                 </div>
                 <div class="list-group-item">
-                    <div class="jumbotron center-block" style="align-content: center">
+                    <div class="jumbotron center-block" style="align-content: center;background-color: white;">
                         <p><a class="btn btn-primary btn" href="#" role="button">Load more</a></p>
                     </div>
                 </div>
