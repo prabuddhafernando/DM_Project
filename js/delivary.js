@@ -2,6 +2,13 @@
  * Created by Prabudda on 3/13/2017.
  */
 
+
+window.onload = function () {
+
+
+    $('#delivery').css('background', '#e4e4e4');
+}
+
 $(document).on('click', '.panel-heading span.clickable', function(e){
     var $this = $(this);
     if(!$this.hasClass('panel-collapsed')) {

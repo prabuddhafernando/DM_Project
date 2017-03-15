@@ -1,4 +1,9 @@
 window.onload = function () {
+
+
+    $('#dashboard').css('background','#e4e4e4');
+
+
     var chart = new CanvasJS.Chart("chartContainer",
         {
             theme: "theme1",
@@ -103,3 +108,4 @@ $(function(){
 
 
 });
+
