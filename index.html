@@ -66,7 +66,7 @@
 
     <div class="row" style="background-color: #e4e4e4;height: 1000px;padding-top: 37px">
         <!--item menu-->
-        <div class="col-lg-2 col-sm-2 col-md-2"  style="height: 100%;width:auto">
+        <div class="col-lg-1 col-sm-1 col-md-1"  style="height: 100%;width:auto">
             <div id="menuitm" >
             <div class="btn-group-vertical " role="group" style="width: 100%">
                 <button class="list-group-item" id="dashboard" onclick="location.href='index.html';"><img src="images/dashboard/u17.png" style="padding:10px;cursor: pointer;" /></button>
@@ -74,11 +74,12 @@
                 <button class="list-group-item" id="delivery" onclick="location.href='delivery.html';"><img src="images/dashboard/u9.png" style="padding:10px;cursor: pointer;"/></button>
                 <button class="list-group-item" id="reports" onclick="location.href='reports.html';"><img src="images/dashboard/u235.png" style="padding:10px;cursor: pointer;"/></button>
                 <button class="list-group-item" id="staff" onclick="location.href='staff.html';"><img src="images/dashboard/u7.png" style="padding:10px;cursor: pointer;"/></button>
+                <button class="list-group-item" id="client" onclick="location.href='client.html';"><img src="images/dashboard/client.png" style="padding:10px;cursor: pointer;"/></button>
             </div>
             </div>
         </div>
         <!-- middle pane -->
-        <div class="col-lg-8 col-sm-10 col-md-7" style="background-color:#e4e4e4;height: 100%;text-align: center;padding-left: 25px;padding-right: 28px;">
+        <div id="middlepane" class="col-lg-9 col-sm-10 col-md-7" style="background-color:#e4e4e4;height: 100%;text-align: center;padding-left: 25px;padding-right: 28px;">
 
             <div class="row" style="background-color: #f2f2f2;">
                 <div class="col-sm-11" >
@@ -209,7 +210,7 @@
 
         </div>
         <!-- right pane -->
-        <div class="col-lg-2 col-sm-4 col-md-3" style="background-color:white;height: 100%;padding: 10px;">
+        <div id="rightpane" class="col-lg-2 col-sm-1 col-md-1" style="background-color:white;height: 100%;padding: 10px;">
 
             <div class="list-group">
                 <div class="list-group-item" style="text-align: center">PENDING DELIVERY</div>
@@ -252,15 +253,20 @@
                             </div>
                         </a>
 
+                        <a href="#" class="list-group-item" style="text-align: center;">
 
+                            <div class="btn-group btn-group" role="group" aria-label="...">
+
+                                <div class="btn-group" role="group">
+                                    <div class="btn btn-primary " href="#" role="button">Load more</div>
+                                </div>
+
+                            </div>
+                        </a>
                     </div>
 
                 </div>
-                <div class="list-group-item">
-                    <div class="jumbotron center-block" style="align-content: center;background-color: white;">
-                        <p><a class="btn btn-primary btn" href="#" role="button">Load more</a></p>
-                    </div>
-                </div>
+
             </div>
         </div>
 
